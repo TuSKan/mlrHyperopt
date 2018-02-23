@@ -23,7 +23,9 @@ getTaskDictionary = function(task) {
     p = getTaskNFeats(task),
     n.task = getTaskSize(task),
     type = getTaskType(task),
-    n = getTaskSize(task)
+    n = getTaskSize(task),
+    maxy = max(getTaskTargets(task)),
+    miny = min(getTaskTargets(task))
   )
   if (dict$type == "classif") {
     dict$k = length(getTaskClassLevels(task))
